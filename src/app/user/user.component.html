@@ -1,0 +1,9 @@
+<h1>User Details</h1>
+<section *ngIf="user$ | async as user; else loading">
+    <h2>{{user.name}}</h2>
+    <h5>{{user.email}}</h5>
+</section>
+
+<ng-template #loading>
+<p>loading...</p>
+</ng-template>
